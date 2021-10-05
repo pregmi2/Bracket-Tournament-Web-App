@@ -1,0 +1,138 @@
+<div
+  class="bg-dark p-2 text-white container-fluid"
+  [class.bg-warning]="editing"
+  [class.text-dark]="editing"
+>
+  <h5>{{ editing ? "Edit" : "Add" }} Players</h5>
+</div>
+<h5>Please add name of 8 Players in each group for a new Single Elimination Tournament</h5>
+
+<form novalidate #form="ngForm" (ngSubmit)="save(form)">
+  <div class="form-group">
+    <label>Name Your Tournament</label>
+    <input
+      type="text"
+      name="title"
+      class="form-control"
+      [(ngModel)]="group.title"
+    />
+  </div>  
+  <div class="form-group">
+    <input
+      type="checkbox"
+      name="groupType"
+      [(ngModel)]="group.groupType"
+    />
+    <label class="ms-2"> 8 Players</label>
+  </div>
+  <div class="form-group mt-2">
+    <input
+      type="checkbox"
+      name="status"
+      [(ngModel)]="group.status"
+    />
+    <label class="ms-2"> 4 Players</label>
+  </div>
+  <div class="form-group">
+    <label>Date of the Tournament</label>
+    <input
+      type="date"
+      name="tourndate"
+      class="form-control"
+      [(ngModel)]="group.tourndate"
+    />
+  </div>
+  <div class="form-group">
+    <label>Player 1 </label>
+    <input
+      type="text"
+      name="p1"
+      class="form-control"
+      [(ngModel)]="group.p1"
+    />
+  </div>
+  <div class="form-group">
+    <label>Player 2 </label>
+    <input
+      type="text"
+      name="p2"
+      class="form-control"
+      [(ngModel)]="group.p2"
+    />
+  </div>
+  <div class="form-group">
+    <label>Player 3 </label>
+    <input
+      type="text"
+      name="p3"
+      class="form-control"
+      [(ngModel)]="group.p3"
+    />
+  </div>
+  <div class="form-group">
+    <label>Player 4 </label>
+    <input
+      type="text"
+      name="p4"
+      class="form-control"
+      [(ngModel)]="group.p4"
+    />
+  </div> 
+  <div class="form-group">
+    <label>Player 5 </label>
+    <input
+      type="text"
+      name="p5"
+      class="form-control"
+      [(ngModel)]="group.p5"
+    />
+  </div>
+  <div class="form-group">
+    <label>Player 6 </label>
+    <input
+      type="text"
+      name="p6"
+      class="form-control"
+      [(ngModel)]="group.p6"
+    />
+  </div>
+  <div class="form-group">
+    <label>Player 7 </label>
+    <input
+      type="text"
+      name="p7"
+      class="form-control"
+      [(ngModel)]="group.p7"
+    />
+  </div>
+  <div class="form-group">
+    <label>Player 8 </label>
+    <input
+      type="text"
+      name="p8"
+      class="form-control"
+      [(ngModel)]="group.p8"
+    />
+  </div> 
+  <div></div>
+
+  <div>
+  <button
+    type="submit"
+    class="btn btn-primary m-2"
+    [class.btn-warning]="editing"
+  >
+    <i class="{{ editing ? 'fas fa-save' : 'fas fa-plus-circle' }}"></i>
+    {{ editing ? "Save" : "Add" }}
+  </button>
+  <button class="btn btn-secondary" type="reset" routerLink='/admin/main/group'>
+      <i class="fas fa-undo"></i> Cancel</button></div>
+      
+</form>
+<style>  
+  div {  
+    border: 3px  whitesmoke;  
+    padding-bottom: 35px;  
+    background-color: whitesmoke;  
+  }  
+  </style>

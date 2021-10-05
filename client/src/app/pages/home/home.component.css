@@ -1,0 +1,21 @@
+#outside {
+  background-color: #FF5733;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+form {
+  margin: 0 auto;
+  width: 90%;
+  padding: 1em;
+  border-radius: 1em;
+}
+
+#tournament-form {
+  background-color: #FFBD33;
+}
+
+fieldset { 
+  border:1px solid #FFBD33;
+  margin: 10px;
+}

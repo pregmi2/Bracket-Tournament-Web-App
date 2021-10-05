@@ -1,0 +1,29 @@
+<div class="container-fluid">
+  <div class="row mt-2">
+    <div class="col-2">
+      <button
+        class="btn btn-outline-dark col-12"
+        routerLink="/admin/main/users"
+        routerLinkActive="active"
+      >
+        Show All Users
+      </button>
+      <button
+      class="btn btn-outline-dark col-12 mt-2"
+      routerLink="/admin/main/group"
+      routerLinkActive="active"
+    >
+      Create Group
+    </button>
+    <button
+      class="btn btn-outline-dark col-12 mt-2"
+      routerLink="/admin/main/tournaments"
+      routerLinkActive="active">
+      Create Single Elimination Tournament
+    </button>
+    </div>
+    <div class="col-9">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

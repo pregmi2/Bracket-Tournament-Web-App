@@ -1,0 +1,39 @@
+<table class="table table-sm table-striped">
+    <thead>
+      <tr>
+        <th>Group Name</th>
+        <th>Group Type</th>
+        <th>Added By</th>
+        <th>Tournament On</th>
+        <th>Active</th>   
+        <th>Winner</th>    
+        <th>Play/Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+       <tr *ngFor="let b of getgroups()">
+        <td>{{ b.title }}</td>
+        <td>{{ b.groupType  === true ? "8 Player" : "4 Player"}}</td>
+        <td>{{ b.userCreator }}</td>
+        <td>{{ b.tourndate }}</td>
+        <td>{{ b.status  === true ? "Active" : "Inactive" }}</td>
+        <td>{{ b.p1 }}</td>
+        <td>
+          <button
+            (click)='editgroup(b._id)'
+            class="btn btn-sm btn-dark m-1"
+          >
+            <i class="fas fa-sync-alt"></i>
+          </button>
+          <button class="btn btn-sm btn-danger m-1" (click)="deletegroup(b._id)">
+            <i class="fas fa-trash-alt"></i>
+          </button>
+        </td>
+      </tr> 
+    </tbody>
+  </table>
+  
+   <button class="btn btn-dark" (click)='addgroup()'>
+    <i class="fas fa-plus-circle"></i> Add New Group
+  </button> 
+  
