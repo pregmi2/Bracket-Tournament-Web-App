@@ -31,8 +31,8 @@ export class RestDataSource {
 
   constructor(private http: HttpClient, private jwtService: JwtHelperService) {
     this.user = new User();
-    //this.baseUrl = `${POROTOCOL}://${location.hostname}:${PORT}/api/`;
-    this.baseUrl = 'https://bracket-tournament.herokuapp.com/api/';
+    this.baseUrl = `${POROTOCOL}://${location.hostname}:${PORT}/api/`;
+    //this.baseUrl = 'https://bracket-tournament.herokuapp.com/api/';
   }
 
   // ***************** User Section  ***************************
